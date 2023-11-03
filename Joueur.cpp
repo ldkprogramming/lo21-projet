@@ -63,3 +63,19 @@ void Joueur::ajouterJeton(Jeton *jeton) {
 void Joueur::ajouterCarteReservee(Carte* carte) {
     cartesReservees.push_back(carte);
 }
+
+Joueur::~Joueur(){
+    for (auto i : main){
+        delete i;
+    }
+
+    for (auto i : cartesReservees){
+        delete i;
+    }
+
+    for (auto i : jetons){
+        delete i;
+    }
+
+    delete this;
+}

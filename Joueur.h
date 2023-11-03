@@ -54,6 +54,8 @@ public:
     void ajouterJeton(Jeton* jeton);
     void ajouterCarte(Carte* carte);
     void ajouterCarteReservee(Carte* carte);
+
+    ~Joueur();
 };
 
 
