@@ -24,6 +24,7 @@
 
 class Joueur {
 private:
+    std::string nom;
 
     std::vector<Carte*> main;
     std::vector<Carte*> cartesReservees;
@@ -37,6 +38,8 @@ private:
     int bonusParCouleur[7] = {0, 0, 0, 0, 0, 0, 0};
 
 public:
+    ~Joueur();
+    Joueur(std::string nom);
     void updateMaxPointsUneCouleur();
 
     inline int getPrivileges() const {
@@ -55,7 +58,7 @@ public:
     void ajouterCarte(Carte* carte);
     void ajouterCarteReservee(Carte* carte);
 
-    ~Joueur();
+
 };
 
 

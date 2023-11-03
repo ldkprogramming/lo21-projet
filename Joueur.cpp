@@ -79,3 +79,7 @@ Joueur::~Joueur(){
 
     delete this;
 }
+
+Joueur::Joueur(std::string nom){
+    this->nom = nom;
+}
