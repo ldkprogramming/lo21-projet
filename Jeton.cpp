@@ -1,5 +1,5 @@
 //
-// Created by Leo on 03/11/2023.
+// Gere par Jules: Corps de la classe Jeton
 //
 
 #include "Jeton.h"
@@ -7,13 +7,13 @@
 
 std::string toString(Couleur c) {
     switch (c) {
-        case Couleur::Vert: return "Vert";
-        case Couleur::Bleu: return "Bleu";
-        case Couleur::Rouge: return "Rouge";
         case Couleur::Blanc: return "Blanc";
+        case Couleur::Bleu: return "Bleu";
         case Couleur::Noir: return "Noir";
         case Couleur::Or: return "Or";
         case Couleur::Perle: return "Perle";
+        case Couleur::Rouge: return "Rouge";
+        case Couleur::Vert: return "Vert";
         default: throw std::invalid_argument("Couleur inconnue");
     }
 }

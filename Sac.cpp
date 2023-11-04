@@ -1,5 +1,5 @@
 //
-// Created by Leo on 03/11/2023.
+// Gere par Jules: Corps de la classe Sac
 //
 
 #include "Sac.h"
@@ -37,26 +37,33 @@ void Sac::addJeton(const Jeton& j) {
         jetons[nb_jetons] = j;
         nb_jetons++;
     }
-    else throw std::overflow_error("Le sac est d�j� rempli");
+    else throw std::overflow_error("Le sac est deja rempli");
 }
 
 
 Jeton* Sac::distribue() {
-    // Seed al�atoire pour un r�sultat toujours diff�rent
+    std::cout << "Jetons distribues:" << std::endl;
+    // Seed aleatoire pour un resultat toujours different
     srand(time(NULL));
-    std::cout << "Jetons distribu�s:" << std::endl;
-    Jeton* liste_jetons = new Jeton[nb_jetons]; // Liste des jetons m�lang�s
+
+    Jeton* liste_jetons = new Jeton[nb_jetons]; // Liste qui contiendra les jetons melanges
+    
     int i = 0;
     while (nb_jetons > 0) {
+        // On prend un jeton aleatoire
         int indice_jeton = rand() % nb_jetons;
-        liste_jetons[i] = jetons[indice_jeton];	// On prend un jeton al�atoire
+        liste_jetons[i] = jetons[indice_jeton];
         std::cout << liste_jetons[i] << std::endl;
+
+        // On decale tous les autres jetons
         for (int j = indice_jeton; j < nb_jetons - 1; j++) {
-            jetons[j] = jetons[j + 1];	// On d�cale tous les autres jetons
+            jetons[j] = jetons[j + 1];	
         }
+
         nb_jetons--;
         i++;
     }
+
     delete[] jetons;
     jetons = nullptr;
     nb_jetons = 0;

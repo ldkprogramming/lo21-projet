@@ -1,5 +1,5 @@
 //
-// Created by Leo on 03/11/2023.
+// Gere par Jules: Definition de la classe Jeton
 //
 
 #ifndef LO21_PROJET_JETON_H
@@ -7,16 +7,17 @@
 
 #include <iostream>
 
-enum class Couleur {Vert, Bleu, Rouge, Blanc, Noir, Or, Perle};
+// Enumeration des couleurs, dans l'ordre alphabetique
+enum class Couleur {Blanc, Bleu, Noir, Or, Perle, Rouge, Vert};
     std::string toString(Couleur c);
     std::ostream& operator<<(std::ostream& f, Couleur c);
 
 class Jeton {
     Couleur couleur;
 public:
-    Jeton() { couleur = Couleur::Vert; } // Obligatoire pour la cr�ation de liste de Jetons
+    Jeton() { couleur = Couleur::Vert; } // Obligatoire pour la creation de liste de Jetons
     Jeton(Couleur c) : couleur(c) {}
-    Jeton& operator=(const Jeton& j) { couleur = j.couleur; return *this; } // Pas encore utilis�
+    Jeton& operator=(const Jeton& j) { couleur = j.couleur; return *this; } // Pas encore utilise
     // getter
     Couleur getCouleur() const { return couleur; }
 };

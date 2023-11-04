@@ -1,5 +1,5 @@
 //
-// Created by Leo on 03/11/2023.
+// Gere par Jules: Definition de la classe Sac
 //
 
 #ifndef LO21_PROJET_SAC_H
