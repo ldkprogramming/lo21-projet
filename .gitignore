@@ -1,2 +1,6 @@
 /CMakeLists.txt
 .vs
+lo21-projet.sln
+lo21-projet.vcxproj
+lo21-projet.vcxproj.filters
+lo21-projet.vcxproj.user
