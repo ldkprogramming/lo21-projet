@@ -1,5 +1,6 @@
 /CMakeLists.txt
 .vs
+x64
 lo21-projet.sln
 lo21-projet.vcxproj
 lo21-projet.vcxproj.filters

@@ -9,18 +9,19 @@
 
 class PlateauJetons {
 
-    Jeton* jetons;
+    Jeton** jetons;
     int nb_jetons = 0;
 
 public:
     PlateauJetons();
     void affichePlateauJetons();
 
-    void addJetons(const Jeton* liste_jetons);
+    void addJeton(const Jeton& liste_jetons);
+    Jeton& removeJeton(int i, int j);
     //Jeton* distribue();
 
     // getters
-    Jeton* getJetons() const { return jetons; }
+    Jeton** getJetons() const { return jetons; }
     int getNbJetons() const { return nb_jetons; }
 };
 
