@@ -22,6 +22,6 @@
 
 ### @minmaxIA:
 
--IA
--Controlleur
--Jeu
+- IA
+- Controlleur
+- Jeu
