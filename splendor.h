@@ -1,5 +1,5 @@
-#ifndef SPLENDORDUEL_SPLENDOR_H
-#define SPLENDORDUEL_SPLENDOR_H
+#ifndef LO21_PROJET_SPLENDOR_H
+#define LO21_PROJET_SPLENDOR_H
 #pragma once
 
 #include <iostream>
@@ -40,4 +40,4 @@ namespace Splendor {
     };
 }
 
-#endif //SPLENDORDUEL_SPLENDOR_H
+#endif //LO21_PROJET_SPLENDOR_H
