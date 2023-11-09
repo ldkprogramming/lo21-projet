@@ -4,7 +4,6 @@
 //
 
 #include "Carte.h"
-#include "splendor.h"
 
 namespace Splendor {
     //on initialiase les variables Pioche (définies comme globales dans "splendor.h")
