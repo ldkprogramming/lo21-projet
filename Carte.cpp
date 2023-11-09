@@ -6,16 +6,6 @@
 #include "Carte.h"
 
 namespace Splendor {
-    //on initialiase les variables Pioche (définies comme globales dans "splendor.h")
-    Pioche p1(Tas::un);
-    Pioche p2(Tas::deux);
-    Pioche p3(Tas::trois);
-    Pioche pR(Tas::royal);
-    Pioche* Pioches[4] = {&p1,&p2,&p3,&pR};
-    int compteur = 0;
-
-    //------------------------------------------------------------------------------------------------------------------
-
     //Constructeur de Carte --> la mémoire pours les prix et les bonus
     Carte::Carte(Tas t, int nb_p, int nb_c, int* p, int* b, Capacite capa, Capacite capa2):niveau(t), nb_points(nb_p),
                                                                                            nb_couronnes(nb_c),capacite(capa),
