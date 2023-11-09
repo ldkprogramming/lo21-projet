@@ -75,4 +75,15 @@ namespace Splendor {
             return f;
     }
 
+
+    //transforme une chaîne de caractères en un objet Capacite
+    Capacite toCapacite(string c){
+        if (c == "Rejoue") return Capacite::Rejoue;
+        else if (c == "Bonus") return Capacite::Bonus;
+        else if (c == "PrendJeton") return Capacite::PrendJeton;
+        else if (c == "PrendPrivilege") return Capacite::PrendPrivilege;
+        else if (c == "VolJeton") return Capacite::VolJeton;
+        else return Capacite::Null;
+    }
+
 }
