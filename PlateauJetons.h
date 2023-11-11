@@ -11,12 +11,13 @@ class PlateauJetons {
 
     Jeton** jetons;
     int nb_jetons = 0;
+    // Jeton** plateauspirale
 
 public:
     PlateauJetons();
     void affichePlateauJetons();
 
-    void addJeton(const Jeton& liste_jetons);
+    void addJeton(const Jeton& j);
     Jeton& removeJeton(int i, int j);
     //Jeton* distribue();
 

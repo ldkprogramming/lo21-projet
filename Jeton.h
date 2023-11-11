@@ -18,7 +18,8 @@ public:
     Jeton() { couleur = Couleur::Vert; } // Obligatoire pour la creation de liste de Jetons
     Jeton(Couleur c) : couleur(c) {}
     Jeton(const Jeton& j) : couleur(j.couleur) {}; // Constructeur par recopie
-    Jeton& operator=(const Jeton& j) { couleur = j.couleur; return *this; } // Pas encore utilise
+    Jeton& operator=(const Jeton& j) { couleur = j.couleur; return *this; } // Pas encore utilise, inutile?
+    
     // getter
     Couleur getCouleur() const { return couleur; }
 };

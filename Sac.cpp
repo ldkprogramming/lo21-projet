@@ -6,6 +6,7 @@
 #include <iostream>
 
 Sac::Sac() {
+    // Constructeur a changer (voir compte-rendu)
     jetons = nullptr;
     for (int i = 0; i < 25; i++) {
         if (i < 4) addJeton(Couleur::Vert);
@@ -19,7 +20,8 @@ Sac::Sac() {
 }
 
 void Sac::afficheSac() {
-    if (nb_jetons == 0) std::cout << "Sac Vide!" << std::endl;
+    // Fonction qui affiche le contenu du sac dans la console
+    if (nb_jetons == 0) std::cout << "Sac Vide!" << std::endl; // Si le sac est vide, on n'affiche rien
     else {
         std::cout << "Contenu du Sac:" << std::endl;
         for (int i = 0; i < nb_jetons; i++) {
@@ -29,10 +31,13 @@ void Sac::afficheSac() {
 }
 
 void Sac::addJeton(const Jeton& j) {
-    if (jetons == nullptr) {
+    // a changer, j'aime pas trop l'idée qu'on puisse avoir un nullptr ou une liste de 25 jetons
+    // il faudrait peut-etre passer a un attribut Jeton** comme pour PlateauJetons
+    if (jetons == nullptr) { 
         jetons = new Jeton[25];
         nb_jetons = 0;
     }
+    // S'il reste de la place, on ajoute le jeton, sinon erreur
     if (nb_jetons < 25) {
         jetons[nb_jetons] = j;
         nb_jetons++;
@@ -64,6 +69,7 @@ Jeton* Sac::distribue() {
         i++;
     }
 
+    // On supprime la liste initiale (on vide le sac)
     delete[] jetons;
     jetons = nullptr;
     nb_jetons = 0;

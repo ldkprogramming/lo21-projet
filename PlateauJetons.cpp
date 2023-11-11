@@ -6,6 +6,7 @@
 #include <string>
 
 PlateauJetons::PlateauJetons(){
+    // Constructeur a changer (voir compte-rendu)
     jetons = new Jeton*[25];
     for (int i = 0; i < 25; i++) {
         if (i < 4) addJeton(Couleur::Vert);
@@ -19,7 +20,7 @@ PlateauJetons::PlateauJetons(){
 }
 
 void PlateauJetons::affichePlateauJetons(){
-    std::cout << "Plateau Jetons:" << std::endl;
+    std::cout << " Plateau Jetons:" << std::endl << " ";
     
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
@@ -38,11 +39,13 @@ void PlateauJetons::affichePlateauJetons(){
             }
             std::cout << s << " ";
         }
-        std::cout << std::endl;
+        std::cout << std::endl << " ";
     }
 }
 
 void PlateauJetons::addJeton(const Jeton& j){
+    // S'il reste de la place, on ajoute le jeton, sinon erreur
+    // Ajout du Jeton dans plateauspirale a implementer!!
     if (nb_jetons < 25) {
         jetons[nb_jetons] = new Jeton(j);
         nb_jetons++;
@@ -51,6 +54,8 @@ void PlateauJetons::addJeton(const Jeton& j){
 }
 
 Jeton& PlateauJetons::removeJeton(int i, int j){
+    // Ajouter une erreur si on choisi une case vide
+    // Ajouter l'implementation avec plateauspirale
     if (i<0 || i>4 || j<0 || j>4) throw std::overflow_error("Ce n'est pas une coordonnee valide sur le Plateau Jetons");
     Jeton& jeton = *jetons[i * 5 + j];
     jetons[i * 5 + j] = nullptr;
