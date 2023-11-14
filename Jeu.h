@@ -1,13 +1,20 @@
 //
 // Created by Leo on 03/11/2023.
 //
+// Hamza
+
 
 #ifndef LO21_PROJET_JEU_H
 #define LO21_PROJET_JEU_H
 
 #include "Sac.h"
 #include "Pioche.h"
-
+#include "Jeu.h"
+#include "PlateauJetons.h"
+#include "PlateauCartes.h"
+#include "Privilege.h"
+#include "splendor.h"
+#include "sqlite3.c"
 
 class Jeu {
 private:
@@ -28,8 +35,8 @@ private:
     };
     static Handler handler;
 
-    Sac sac = Sac();
-    // PlateauJetons ...
+     sac = Sac();
+    plateaujetons=PlateauJetons()
     // PlateauCartes
     Pioche pioche = Pioche();
 
@@ -48,3 +55,5 @@ public:
 
 
 #endif //LO21_PROJET_JEU_H
+
+
