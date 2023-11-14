@@ -15,7 +15,7 @@
 #include "Privilege.h"
 #include "splendor.h"
 #include "sqlite3.c"
-//Salut Jules
+
 
 class Jeu {
 private:
