@@ -3,6 +3,7 @@
 //
 
 #include "Jeu.h"
+#include <cstdlib>
 Jeu::Handler Jeu::handler = Handler();
 
 
