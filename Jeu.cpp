@@ -19,3 +19,9 @@ void Jeu::libererInstance() {
     handler.instance = nullptr;
 }
 */
+
+Joueur& definir_premier_joueur(Joueur& un, Joueur& deux) {
+    int random_nb = rand() % 2;
+    if (random_nb == 0) { return un; }
+    else { return deux; }
+}
