@@ -54,6 +54,8 @@ public:
 
 };
 
+Joueur& definir_premier_joueur(Joueur& un, Joueur& deux);
+
 
 #endif //LO21_PROJET_JEU_H
 
