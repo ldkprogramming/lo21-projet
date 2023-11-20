@@ -26,3 +26,6 @@ Joueur& definir_premier_joueur(Joueur& un, Joueur& deux) {
     if (random_nb == 0) { return un; }
     else { return deux; }
 }
+void prendre_privilege(Jouur& un, Joueur& deux) {
+
+}
