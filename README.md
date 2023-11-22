@@ -19,9 +19,9 @@
 - Joueur
 - BDD
 - Github
+- Controlleur
 
-### @minmaxIA:
+### @bannedtwice:
 
 - IA
-- Controlleur
 - Jeu
